@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel el Rincón del Carmen - Página Principal</title>
+</head>
+<body>
+    <header class="header-menu-lateral">
+        <input type="checkbox" id="menu-lateral" class="menu-lateral-index">
+
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="titulo-menu">Hotel el Rincón del Carmen</h2>
+                <label for="menu-lateral" class="btn-cerrar">x</label>
+            </div>
+
+            <ul class="menu-links">
+                <li><a href="index.html">🏠<br>Inicio</a></li>
+                <li><a href="reservas.html">🎟️<br>Reservas</a></li>
+                <li><a href="contacto.html">👤<br>Contacto</a></li>
+            </ul>
+        </nav>
+
+        <label for="menu-lateral" class="overlay"></label>
+    </header>
+
+    <header class="header-principal">
+        <label for="menu-lateral" class="menu-logo">☰</label>
+        <h1 class="titulo-index">Hotel el Rincón del Carmen</h1>
+        <div class="header-spacer"></div>
+    </header>
+
+    <main class="main-content">
+        <div id="search-bar">
+            <input type="text" class="pregunta-search-bar" placeholder="🛬 ¿A dónde quieres ir?">
+            <input type="text" class="pregunta-search-bar" placeholder="📆 ¿Cuándo vas?">
+            <input type="text" class="pregunta-search-bar" placeholder="👫 ¿Con quién vas?">
+            <button id="btn-buscar-search">Buscar</button>
+        </div>
+        
+
+        <section>
+            <h2 style="font-size: 1.1rem; margin-bottom: 16px;">Categorías Populares</h2>
+            <div class="fila-categorias">
+                <a href="catalogo.html#seccion-abrigos" class="tarjeta-categoria">
+                    <div class="categoria-logo">🧥</div>
+                    <span>Abrigos</span>
+                </a>
+                <a href="catalogo.html#seccion-camisetas" class="tarjeta-categoria">
+                    <div class="categoria-logo">👕</div>
+                    <span>Camisetas</span>
+                </a>
+                <a href="catalogo.html#seccion-pantalones" class="tarjeta-categoria">
+                    <div class="categoria-logo">👖</div>
+                    <span>Pantalones</span>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="font-size: 1.1rem; margin-bottom: 16px;">Novedades para ti</h2>
+            <div class="productos-novedades">
+                <article class="tarjeta-producto">
+                    <img src="images/abrigo5.png" alt="Abrigo" class="imagen-producto">
+                    <h3 class="titulo-producto">Abrigo Negro para hombre</h3>
+                    <p class="precio-producto">$150.000 COP</p>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <img src="images/pantalon1.png" alt="Pantalon" class="imagen-producto">
+                    <h3 class="titulo-producto">Pantalón Blanco para mujer</h3>
+                    <p class="precio-producto">$100.000 COP</p>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <img src="images/camiseta3.png" alt="Camiseta" class="imagen-producto">
+                    <h3 class="titulo-producto">Camiseta Estampado Margarita para mujer</h3>
+                    <p class="precio-producto">$50.000 COP</p>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <img src="images/abrigo1.png" alt="Abrigo" class="imagen-producto">
+                    <h3 class="titulo-producto">Abrigo Gris para mujer</h3>
+                    <p class="precio-producto">$140.000 COP</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bottom-nav">
+        <a href="index.html">🏠<br>Inicio</a>
+        <a href="reservas.html">🎟️<br>Reservas</a>
+        <a href="contacto.html">👤<br>Contacto</a>
+    </footer>
+</body>
+</html>
