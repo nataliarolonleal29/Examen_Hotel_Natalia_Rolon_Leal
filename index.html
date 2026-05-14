@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel el Rincón del Carmen</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/auth.js" defer></script>
 </head>
 <body>
     <header class="header-menu-lateral">
@@ -57,15 +58,15 @@
 
             <div class="fila-servicios">
                 <div class="tarjeta-servicio">
-                    <img src="" alt="piscina" class="servicio-imagen">
-                    <span>Piscina 🏊‍♂️</span>
+                    <img src="assets/images/show.jpg" alt="show-room" class="servicio-imagen">
+                    <span>Show Room 💃🎶</span>
                 </div>
                 <div class="tarjeta-servicio">
-                    <img src="" alt="restaurante" class="servicio-imagen">
+                    <img src="assets/images/restaurante.avif" alt="restaurante" class="servicio-imagen">
                     <span>Restaurante 🍽️🍷</span>
                 </div>
                 <div class="tarjeta-servicio">
-                    <img src="" alt="spa" class="servicio-imagen">
+                    <img src="assets/images/spa.jpg" alt="spa" class="servicio-imagen">
                     <span>Spa 🧖‍♀️</span>
                 </div>
             </div>
@@ -74,15 +75,53 @@
         <section>
             <h2 class="titulo-seccion">Habitaciones Destacadas</h2>
             
-            <div class="productos"></div>
+            <div class="productos-novedades">
+                <article class="tarjeta-producto">
+                    <img src="assets/images/habitacion familiar.webp" alt="habitacion" class="imagen-producto">
+                    <h3 class="titulo-producto">Suite Familiar</h3>
+                    <p class="precio-producto">$320.000 COP / noche</p>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <img src="assets/images/habitacion 2.jpg" alt="habitacion" class="imagen-producto">
+                    <h3 class="titulo-producto">Habitación Matrimonial</h3>
+                    <p class="precio-producto">$340.000 COP / noche</p>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <img src="assets/images/habitacion 1.jpg" alt="habitacion" class="imagen-producto">
+                    <h3 class="titulo-producto">Suite Deluxe</h3>
+                    <p class="precio-producto">$450.000 COP / noche</p>
+                </article>
+            </div>
+            </div>
+        </section>
+
+        <section class="galeria">
+            <h2 class="titulo-seccion">Galería del hotel</h2>
+            <div class="contenedor-galeria">
+                <img src="assets/images/piscina.webp" alt="piscina">
+                <h3>Piscina 🏊‍♂️</h3>
+                <img src="assets/images/jacuzzi.avif" alt="jacuzzi">
+                <h3>Jacuzzi 🧖</h3>
+                <img src="assets/images/spa.jpg" alt="spa">
+                <h3>Spa 💆‍♀️</h3>
+                <img src="assets/images/restaurante.avif" alt="restaurante">
+                <h3>Restaurante 🍽️🍷</h3>
+                <img src="assets/images/show.jpg" alt="show-room">
+                <h3>Show Room 💃🎶</h3>
+                <img src="assets/images/bar.jpg" alt="bar">
+                <h3>Bar 🍻🥂🍾</h3>
+                <img src="assets/images/wifi.webp" alt="wifi">
+                <h3>Wifi 🛜</h3>
             </div>
         </section>
     </main>
 
     <footer class="bottom-nav">
         <a href="index.html">🏠<br>Inicio</a>
-        <a href="reservas.html">🎟️<br>Reservas</a>
-        <a href="contacto.html">👤<br>Contacto</a>
+        <a href="reservas.html">🛏️<br>Reservas</a>
+        <a href="contacto.html">📍<br>Contacto</a>
     </footer>
 </body>
 </html>
