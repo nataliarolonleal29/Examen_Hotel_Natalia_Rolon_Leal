@@ -7,11 +7,24 @@ if (registroForm){
         e.preventDefault();
     
         const nombre=document.getElementById("nombre").value.trim();
-        const correo=document.getElementById("correo").value.trim();
-        const contraseña=document.getElementById("contraseña").value.trim();
+        const email=document.getElementById("email").value.trim();
+        const password=document.getElementById("password").value.trim();
     
-        if(nombre==="" || correo==="" || contraseña===""){
+        if(nombre==="" || email==="" || password===""){
             alert("Todos los campos son obligatorios");
+            return;
+        }
+
+        const nombreValid=
+        /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+
+        if(!nombreValid.test(nombre)){
+            alert("El nombre solo puede contener letras");
+            return;
+        }
+
+        if(nombre.length<3){
+            alert("El nombre debe tener mínimo 3 letras");
             return;
         }
 
@@ -23,14 +36,14 @@ if (registroForm){
             return;
         }
 
-        if(password.lenght < 6){
+        if(password.length < 6){
             alert("La contraseña debe tener mínimo 6 caracteres");
             return;
         }
     
         let usuarios=JSON.parse(localStorage.getItem("usuarios")) || [];
     
-        const exists=usuarios.find(user => user.correo === correo);
+        const exists=usuarios.find(user => user.email === email);
     
         if(exists){
             alert("El usuario ya existe");
@@ -40,8 +53,8 @@ if (registroForm){
         const nuevoUsuario={
             id: Date.now(),
             nombre,
-            correo,
-            contraseña
+            email,
+            password
         };
     
         usuarios.push(nuevoUsuario);
@@ -62,17 +75,18 @@ if(loginForm){
     loginForm.addEventListener("submit", (e)=>{
         e.preventDefault();
     
-        const email=document.getElementById("login-email").value.trim();
-        const password=document.getElementById("login-password").value.trim();
+        const email=document.getElementById("email").value.trim();
+        const password=document.getElementById("password").value.trim();
     
         const usuarios=JSON.parse(localStorage.getItem("usuarios")) || [];
     
         const usuarioEncontrado=usuarios.find(usuario=>{
-            usuario.email===email &&
-            usuario.password===password
+            return(
+                usuario.email===email &&
+                usuario.password===password
+            );
         });
     
-        //dos formas de hacerlo
         if(!usuarioEncontrado){
             alert("Correo o contraseña incorrectos");
             return;
@@ -83,23 +97,35 @@ if(loginForm){
         );
         alert(`Bienvenido ${usuarioEncontrado.nombre}`);
         window.location.href="index.html";
-
-        /* if(usuarioEncontrado){
-            localStorage.setItem("loggedUser", JSON.stringify(usuarioEncontrado));
-            alert("¡Bienvenido, ", usuario.nombre, "!");
-    
-            window.location.href="index.html";
-        } else{
-            alert("Datos incorrectos");
-        } */
     });
 }
 
+function obtenerUsuarioActivo() {
+            return JSON.parse(localStorage.getItem("usuarioActivo"));
+        }
 
+        const userInfo=document.getElementById("userInfo");
+
+        if(userInfo){
+            const usuarioActivo=obtenerUsuarioActivo();
+
+            if(usuarioActivo){
+                userInfo.innerHTML=`Hola, ${usuarioActivo.nombre}`;
+            } else{
+                userInfo.innerHTML=`Invitado`;
+            }
+        }
+
+function logout() {
+    localStorage.removeItem("usuarioActivo");
+    alert("Sesión cerrada");
+    setTimeout(()=>{
+        window.location.href="login.html";
+    }, 1000);
+}
 
 // Logout
 function logout() {
-    localStorage.removeItem("loggedUser");
+    localStorage.removeItem("usuarioActivo");
     window.location.href="login.html";
 }
-
