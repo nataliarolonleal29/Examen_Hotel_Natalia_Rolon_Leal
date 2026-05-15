@@ -8,9 +8,11 @@ export const habitaciones = [
     precio: 320,
     descripcion: "Habitación amplia y cómoda ideal para familias. Cuenta con espacios modernos y ambiente acogedor para una estadía relajante.",
     servicios: ["Wifi", "Jacuzzi", "Minibar", "TV Smart"],
-    imagen: "./assets/images/habitaciones/habitacion familiar.webp",
-    bathroom: "./assets/images/baños/tina-regadera-1.jpeg",
-    bar:"./assets/images/mini-bar/bar-1.jpeg"
+    imagenes: [
+      "./assets/images/habitaciones/habitacion familiar.webp",
+      "./assets/images/baños/tina-regadera-1.jpeg",
+      "./assets/images/mini-bar/bar-1.jpeg"
+    ]
   },
 
   {
@@ -22,8 +24,10 @@ export const habitaciones = [
     precio: 180,
     descripcion: "Perfecta para parejas o viajes cortos. Ofrece comodidad, privacidad y un ambiente tranquilo.",
     servicios: ["Wifi", "Aire acondicionado"],
-    imagen: "./assets/images/habitaciones/habitcion doble.jpg",
-    bathroom: "./assets/images/baños/regadera-1.png"
+    imagenes: [
+      "./assets/images/habitaciones/habitcion doble.jpg",
+      "./assets/images/baños/regadera-1.png"
+    ]
   },
 
   {
@@ -35,9 +39,12 @@ export const habitaciones = [
     precio: 250,
     descripcion: "Diseñada para una experiencia romántica y confortable. Incluye detalles elegantes y excelente iluminación.",
     servicios: ["Wifi", "TV Smart", "Balcón"],
-    imagen: "./assets/images/habitaciones/habitacion matrimonial.png",
-    bathroom:"./assets/images/baños/baño 5.avif",
-    balcon:"./assets/images/balcon/balcon-1.webp"
+
+    imagenes: [
+      "./assets/images/habitaciones/habitacion matrimonial.png",
+      "./assets/images/baños/baño 5.avif",
+      "./assets/images/balcon/balcon-1.webp"
+    ]
   },
 
   {
@@ -49,8 +56,11 @@ export const habitaciones = [
     precio: 95,
     descripcion: "Habitación sencilla y funcional para viajeros individuales. Ideal para descansar cómodamente.",
     servicios: ["Wifi", "Ventilador"],
-    imagen: "./assets/images/habitaciones/individual.jpg",
-    bathroom: "./assets/images/baños/baño 3.jpg"
+
+    imagenes: [
+      "./assets/images/habitaciones/individual.jpg",
+      "./assets/images/baños/baño 3.jpg"
+    ]
   },
 
   {
@@ -62,11 +72,13 @@ export const habitaciones = [
     precio: 450,
     descripcion: "Suite elegante con espacios exclusivos y acabados de lujo. Ideal para quienes buscan máximo confort.",
     servicios: ["Wifi", "Jacuzzi", "Minibar", "Sala privada"],
-    imagen: "./assets/images/habitaciones/dormitorio-de-lujo-moderno.jpg",
-    bathroom: "./assets/images/baños/baño 1.jpeg",
-    bar:"./assets/images/mini-bar/bar-2.jpg",
-    sala:"./assets/images/sala/sala-1.jpg"
 
+    imagenes: [
+      "./assets/images/habitaciones/dormitorio-de-lujo-moderno.jpg",
+      "./assets/images/baños/baño 1.jpeg",
+      "./assets/images/mini-bar/bar-2.jpg",
+      "./assets/images/sala/sala-1.jpg"
+    ]
   },
 
   {
@@ -78,9 +90,12 @@ export const habitaciones = [
     precio: 210,
     descripcion: "Perfecta para grupos pequeños o amigos. Cuenta con camas cómodas y excelente distribución del espacio.",
     servicios: ["Wifi", "TV", "Escritorio"],
-    imagen: "./assets/images/habitaciones/hab-triple-1.jpg",
-    bathroom: "./assets/images/baños/regadera-2.jpeg",
-    escritorio:"./assets/images/sala/escritorio-1.jpeg"
+
+    imagenes: [
+      "./assets/images/habitaciones/hab-triple-1.jpg",
+      "./assets/images/baños/regadera-2.jpeg",
+      "./assets/images/sala/escritorio-1.jpeg"
+    ]
   },
 
   {
@@ -92,9 +107,12 @@ export const habitaciones = [
     precio: 370,
     descripcion: "Habitación moderna pensada para viajeros de negocios. Incluye área de trabajo y ambiente elegante.",
     servicios: ["Wifi", "Oficina", "Cafetera"],
-    imagen: "./assets/images/habitaciones/habitacion ejecutiva.jpg",
-    bathroom:"./assets/images/baños/tina-regadera-2.jpg",
-    escritorio:"./assets/images/sala/escritorio-2.jpeg"
+
+    imagenes: [
+      "./assets/images/habitaciones/habitacion ejecutiva.jpg",
+      "./assets/images/baños/tina-regadera-2.jpg",
+      "./assets/images/sala/escritorio-2.jpeg"
+    ]
   },
 
   {
@@ -105,9 +123,12 @@ export const habitaciones = [
     baño: "Tina y regadera",
     precio: 390,
     servicios: ["Wifi", "Jacuzzi", "TV Smart", "Vista al mar"],
-    imagen: "./assets/images/habitaciones/habitacion r.webp",
-    bathroom:"./assets/images/baños/tina-regadera-4.avif",
-    balcon:"./assets/images/balcon/balcon-2.jpeg"
+
+    imagenes: [
+      "./assets/images/habitaciones/habitacion r.webp",
+      "./assets/images/baños/tina-regadera-4.avif",
+      "./assets/images/balcon/balcon-2.jpeg"
+    ]
   },
 
   {
@@ -119,8 +140,11 @@ export const habitaciones = [
     precio: 120,
     descripcion: "Opción accesible y cómoda para estadías cortas. Incluye los servicios esenciales para descansar.",
     servicios: ["Wifi"],
-    imagen: "./assets/images/habitaciones/habitacion economica.avif",
-    bathroom:"./assets/images/baños/regadera-4.jpg"
+
+    imagenes: [
+      "./assets/images/habitaciones/habitacion economica.avif",
+      "./assets/images/baños/regadera-4.jpg"
+    ]
   },
 
   {
@@ -132,8 +156,11 @@ export const habitaciones = [
     precio: 340,
     descripcion: "Habitación acogedora con decoración especial y ambiente íntimo. Ideal para parejas.",
     servicios: ["Wifi", "Jacuzzi", "Decoración especial"],
-    imagen: "./assets/images/habitaciones/habitacion 2.jpg",
-    bathroom: "./assets/images/baños/baño 2.jpg"
+
+    imagenes: [
+      "./assets/images/habitaciones/habitacion 2.jpg",
+      "./assets/images/baños/baño 2.jpg"
+    ]
   },
 
   {
@@ -145,8 +172,11 @@ export const habitaciones = [
     precio: 230,
     descripcion: "Suite cómoda y moderna con excelente iluminación natural. Perfecta para una estadía relajante.",
     servicios: ["Wifi", "TV Smart", "Aire acondicionado"],
-    imagen: "./assets/images/habitaciones/habitacion 1.jpg",
-    bathroom:"./assets/images/baños/tina-regadera-7.jpg"
+
+    imagenes: [
+      "./assets/images/habitaciones/habitacion 1.jpg",
+      "./assets/images/baños/tina-regadera-7.jpg"
+    ]
   },
 
   {
@@ -158,10 +188,13 @@ export const habitaciones = [
     precio: 410,
     descripcion: "Habitación elegante con acabados modernos y vista panorámica. Ideal para descansar con estilo.",
     servicios: ["Wifi", "Minibar", "Vista panorámica"],
-    imagen: "./assets/images/habitaciones/habitacion king.jpg",
-    bathroom: "./assets/images/baños/tina-regadera-5.jpg",
-    balcon:"./assets/images/balcon/balcon-3.jpeg",
-    bar:"./assets/images/mini-bar/bar-3.webp"
+
+    imagenes: [
+      "./assets/images/habitaciones/habitacion king.jpg",
+      "./assets/images/baños/tina-regadera-5.jpg",
+      "./assets/images/balcon/balcon-3.jpeg",
+      "./assets/images/mini-bar/bar-3.webp"
+    ]
   },
 
   {
@@ -173,10 +206,13 @@ export const habitaciones = [
     precio: 780,
     descripcion: "Suite exclusiva con espacios amplios y servicios premium. Diseñada para una experiencia de lujo.",
     servicios: ["Wifi", "Piscina privada", "Jacuzzi", "Cocina"],
-    imagen: "./assets/images/habitaciones/habitacion precidencial.jpg",
-    bathroom:"./assets/images/baños/tina-regadera-3.jpg",
-    bar:"./assets/images/mini-bar/bar-4.avif",
-    balcon:"./assets/images/balcon/balcon-4.jpg"
+
+    imagenes: [
+      "./assets/images/habitaciones/habitacion precidencial.jpg",
+      "./assets/images/baños/tina-regadera-3.jpg",
+      "./assets/images/mini-bar/bar-4.avif",
+      "./assets/images/balcon/balcon-4.jpg"
+    ]
   },
 
   {
@@ -188,8 +224,11 @@ export const habitaciones = [
     precio: 80,
     descripcion: "Habitación práctica y espaciosa para compartir. Ideal para grupos o viajes económicos.",
     servicios: ["Wifi", "Lockers"],
-    imagen: "./assets/images/habitaciones/doble.webp",
-    bathroom:"./assets/images/baños/regadera-3.webp"
+
+    imagenes: [
+      "./assets/images/habitaciones/doble.webp",
+      "./assets/images/baños/regadera-3.webp"
+    ]
   },
 
   {
@@ -201,10 +240,12 @@ export const habitaciones = [
     precio: 500,
     descripcion: "Amplia suite familiar con áreas cómodas y modernas. Perfecta para disfrutar en grupo.",
     servicios: ["Wifi", "Cocina", "TV Smart", "Balcón"],
-    imagen: "./assets/images/habitaciones/king.avif",
-    bathroom:"./assets/images/baños/tina-regadera-6.jpg",
-    balcon:"./assets/images/balcon/balcon-5.webp",
-    bar:"./assets/images/mini-bar/bar-5.webp"
+
+    imagenes: [
+      "./assets/images/habitaciones/king.avif",
+      "./assets/images/baños/tina-regadera-6.jpg",
+      "./assets/images/balcon/balcon-5.webp",
+      "./assets/images/mini-bar/bar-5.webp"
+    ]
   }
 ];
-
