@@ -25,6 +25,7 @@ contenedor.innerHTML = `
       <p><strong>Baño:</strong> ${habitacion.baño}</p>
       <p><strong>servivios:</strong> ${habitacion.servicios}</p>
       <p><strong>Precio:</strong> $${habitacion.precio}</p>
+      <a href="reservas.html"><button>Reservar</button></a>
     </div>
   </div>
 
@@ -72,3 +73,7 @@ btnAnterior.addEventListener("click", ()=>{
    mostrarImagen();
 
 });
+contenedor.addEventListener("click", () => {
+   window.location.href = `habitacion.html?id=${habitacion.id}`;
+ });
+contenedor.appendChild(c);
