@@ -8,12 +8,12 @@
     <script src="js/auth.js" defer></script>
 </head>
 <body>
-    <header class="header-menu-lateral">
-        <input type="checkbox" id="menu-lateral" class="menu-lateral-index">
-        <nav class="sidebar">
+    <header class="sidebar">
+        <input type="checkbox" id="boton-sidebar" class="boton-sidebar">
+        <nav class="sidebar-container">
             <div class="sidebar-header">
                 <h2 class="titulo-menu">Hotel el Rincón del Carmen</h2>
-                <label for="menu-lateral" class="btn-cerrar">✖</label>
+                <label for="sidebar" class="btn-cerrar">✖</label>
             </div>
 
             <ul class="menu-links">
@@ -25,12 +25,19 @@
             </ul>
         </nav>
 
-        <label for="menu-lateral" class="overlay"></label>
+        <label for="sidebar" class="overlay"></label>
     </header>
 
-    <header class="header-principal">
+    <header class="navbar">
         <label for="menu-lateral" class="menu-logo">☰</label>
         <h1 class="titulo-index">Hotel el Rincón del Carmen</h1>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="contacto.html">¡Contáctanos!</a>
+        </nav>
+
         <div class="seccion-usuario">
             <span id="userInfo">Invitado</span>
             <button type="button" onclick="logout()">Salir</button>
@@ -86,40 +93,40 @@
                 <article class="tarjeta-producto">
                     <img src="assets/images/habitaciones/habitacion familiar.webp" alt="habitacion" class="imagen-producto">
                     <h3 class="titulo-producto">Suite Familiar</h3>
-                    <p class="precio-producto">$320.000 COP / noche</p>
+                    <p class="precio-producto">$320 € / noche</p>
                 </article>
 
                 <article class="tarjeta-producto">
                     <img src="assets/images/habitaciones/habitacion matrimonial.png" alt="habitacion" class="imagen-producto">
                     <h3 class="titulo-producto">Habitación Matrimonial</h3>
-                    <p class="precio-producto">$340.000 COP / noche</p>
+                    <p class="precio-producto">$340 € / noche</p>
                 </article>
 
                 <article class="tarjeta-producto">
                     <img src="assets/images/habitaciones/habitacion r.webp" alt="habitacion" class="imagen-producto">
                     <h3 class="titulo-producto">Suite Deluxe</h3>
-                    <p class="precio-producto">$450.000 COP / noche</p>
+                    <p class="precio-producto">$450 € COP / noche</p>
                 </article>
             </div>
             </div>
         </section>
 
-        <section class="galeria">
-            <h2 class="titulo-seccion">Galería del hotel</h2>
-            <div class="contenedor-galeria">
-                <img src="assets/images/piscina.webp" alt="piscina">
+        <section class="carousel-section">
+            <h2 class="titulo-seccion">Todos nuestros servicios</h2>
+            <div class="carousel-container">
+                <img src="assets/images/piscina.webp" alt="piscina" id="carousel-image">
                 <h3>Piscina 🏊‍♂️</h3>
-                <img src="assets/images/jacuzzi.avif" alt="jacuzzi">
+                <img src="assets/images/jacuzzi.avif" alt="jacuzzi" id="carousel-image">
                 <h3>Jacuzzi 🧖</h3>
-                <img src="assets/images/spa.jpg" alt="spa">
+                <img src="assets/images/spa.jpg" alt="spa" id="carousel-image">
                 <h3>Spa 💆‍♀️</h3>
-                <img src="assets/images/restaurante.avif" alt="restaurante">
+                <img src="assets/images/restaurante.avif" alt="restaurante" id="carousel-image">
                 <h3>Restaurante 🍽️🍷</h3>
-                <img src="assets/images/show.jpg" alt="show-room">
+                <img src="assets/images/show.jpg" alt="show-room" id="carousel-image">
                 <h3>Show Room 💃🎶</h3>
-                <img src="assets/images/bar.jpg" alt="bar">
+                <img src="assets/images/bar.jpg" alt="bar" id="carousel-image">
                 <h3>Bar 🍻🥂🍾</h3>
-                <img src="assets/images/wifi.webp" alt="wifi">
+                <img src="assets/images/wifi.webp" alt="wifi" id="carousel-image">
                 <h3>Wifi 💻</h3>
             </div>
         </section>

@@ -1,1 +1,286 @@
 /* font family para todo es:  Georgia, 'Times New Roman', Times, serif */
+
+:root{
+    --color-oscuro: #4d0011;
+    --color-rojo: #7b1830;
+    --color-beige: #dbbe9b;
+    --color-blanco: #f8f1d6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--color-blanco);
+    color: var(--color-oscuro);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-oscuro);
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar h1{
+    color: var(--color-blanco);
+}
+
+.navbar nav{
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.seccion-usuario{
+    color: white;
+}
+
+.hero{
+    height: 90vh;
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content{
+    background-color: rgb(37, 23, 23);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h2{
+    font-size: 2.5rem;
+}
+
+.hero-content p{
+    margin-top: 10px;
+}
+
+button{
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #7b1830;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+.search-section{
+    padding: 30px;
+}
+
+#search-bar{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.pregunta-search-bar{
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.titulo-seccion{
+    margin: 30px;
+    font-size: 2rem;
+}
+
+.fila-servicios{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-servicio{
+    background: var(--color-blanco);
+    padding: 25px;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(29, 29, 29);
+    transition: 0.5s;
+}
+
+.tarjeta-servicio:hover{
+    transform: translateY(-5px);
+}
+
+.servicio-imagen{
+    width: 100%;
+}
+
+.productos-novedades{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.tarjeta-producto{
+    background: var(--color-blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(25, 25, 25);
+    transition: 0.5s;
+}
+
+.tarjeta-producto:hover{
+    transform: scale(1.02);
+}
+
+.imagen-producto{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.titulo-producto{
+    padding: 15px;
+}
+
+.precio-producto{
+    padding: 0 15px 20px;
+}
+
+
+.carousel-section{
+    padding: 50px;
+    text-align: center;
+}
+
+.carousel-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 15px;
+    padding: 30px;
+}
+
+.carousel-container img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.carousel-container img:hover{
+    transform: scale(1.03);
+}
+
+footer{
+    background-color: var(--color-oscuro);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* sidebar reciclado
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 260px;
+    height: 100%;
+    background: rgb(0, 0, 116);
+    z-index: 1000;
+    transition: 0.3s ease;
+    box-shadow: var(--shadow-soft);
+    padding: 25px;
+    color: white;
+}
+
+.boton-sidebar{
+    display: none;
+}
+
+.titulo-menu{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-oscuro);
+    margin: 0;
+    color: white;
+}
+
+.sidebar-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.menu-links{
+    list-style: none;
+    padding: 0;
+}
+
+.menu-links li{
+    margin-bottom: 20px;
+}
+
+.menu-links a{
+    text-decoration: none;
+    color: var(--color-rojo);
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-card);
+    display: none;
+    z-index: 900;
+}
+
+#boton-sidebar:checked ~ .overlay{
+    display: block;
+}
+
+#boton-sidebar:checked ~ .sidebar{
+    left: 0;
+}
+
+.header-spacer{
+    width: 40px;
+}
+
+.sidebar-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 15px;
+} */

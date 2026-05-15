@@ -95,3 +95,21 @@ body{
     width: 5px;
     height: 5px;
 }
+/* TABLET */
+@media (min-width: 768px){
+
+    #contenedor-habitaciones{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+/*Computador*/
+@media (min-width: 1024px){
+
+    .card{
+        max-width: 350px;
+    }
+
+}
