@@ -62,7 +62,7 @@ input1.addEventListener("input", function(){
 input2.addEventListener("input", function(){
   return console.log(input2.value)
 })
-function ingreso(input1, input2){
+function calcularNoches(input1, input2){
   let fechaIngreso = new Date(input1.value);
   let fechaSalida = new Date(input2.value);
   let resultado = fechaSalida - fechaIngreso;
@@ -70,3 +70,8 @@ function ingreso(input1, input2){
   return noches;
 }
 
+function precio(noches){
+  let cantidad = habitacion.precio;
+  let resultado = noches * cantidad;
+  return resultado;
+}
