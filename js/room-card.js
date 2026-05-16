@@ -14,11 +14,15 @@ habitaciones.forEach(habitacion => {
     <p>${habitacion.camas} camas</p>
     <p>Capacidad: ${habitacion.personas}</p>
     <p class="precio">$${habitacion.precio}</p>
-    <button>ver detalle</button>
+    <button class="btn-reservar">ver detalle</button>
 
   `;
-  card.addEventListener("click", () => {
+  const boton = card.querySelector(".btn-reservar");
+
+  boton.addEventListener("click", () => {
+
     window.location.href = `habitacion.html?id=${habitacion.id}`;
+
   });
   contenedor.appendChild(card);
 
