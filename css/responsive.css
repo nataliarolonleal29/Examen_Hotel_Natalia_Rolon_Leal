@@ -1,0 +1,40 @@
+/*  @media(max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-content{
+        width: 90%;
+    }
+
+    .carousel{
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+
+    .carousel img{
+        width: 100%;
+    }
+
+} */
+
+@media(max-width: 768px){
+    .contenedor-slides{
+        height: 300px;
+    }
+
+    .info-slide{
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .info-slide h3{
+        font-size: 1.2rem;
+    }
+
+    .btn-carrusel{
+        font-size: 1.5rem;
+    }
+}

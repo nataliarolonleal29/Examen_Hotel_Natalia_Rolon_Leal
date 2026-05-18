@@ -6,16 +6,18 @@
     <title>Hotel el Rincón del Carmen</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/auth.js" defer></script>
+    <script src="js/components/slider.js" defer></script>
 </head>
 <body>
-    <header class="sidebar">
+    <header class="header-menu-lateral">
         <input type="checkbox" id="boton-sidebar" class="boton-sidebar">
-        <nav class="sidebar-container">
+        
+        <nav class="sidebar">
             <div class="sidebar-header">
                 <h2 class="titulo-menu">Hotel el Rincón del Carmen</h2>
-                <label for="sidebar" class="btn-cerrar">✖</label>
+                <label for="boton-sidebar" class="btn-cerrar">✖</label>
             </div>
-
+            
             <ul class="menu-links">
                 <li><a href="index.html">🏠 Inicio</a></li>
                 <li><a href="reservas.html">🛏️ Reservas</a></li>
@@ -24,12 +26,13 @@
                 <li><a href="register.html">👤 Registro</a></li>
             </ul>
         </nav>
-
-        <label for="sidebar" class="overlay"></label>
+        <label for="boton-sidebar" class="overlay"></label>
     </header>
+    
+
 
     <header class="navbar">
-        <label for="menu-lateral" class="menu-logo">☰</label>
+        <label for="boton-sidebar" class="menu-logo">☰</label>
         <h1 class="titulo-index">Hotel el Rincón del Carmen</h1>
 
         <nav class="navbar">
@@ -40,7 +43,7 @@
 
         <div class="seccion-usuario">
             <span id="userInfo">Invitado</span>
-            <button type="button" onclick="logout()">Salir</button>
+            <button type="button" onclick="logout()"><b>Salir</b></button>
         </div>
         <div class="header-spacer"></div>
     </header>
@@ -50,20 +53,20 @@
             <h2>Disfruta del lujo y la comodidad</h2>
             <p>Vive una experiencia inolvidable frente al paraíso</p>
 
-            <a href="reservas.css"><button>Reservar Ahora</button></a>
+            <a href="reservas.html"><button>Reservar Ahora</button></a>
         </div>
     </section>
 
     <main class="main-content">
         <section class="search-section">
             <div id="search-bar">
-                <label for="pregunta-search-bar">🛬 ¿A dónde quieres ir?</label>
-                <input type="date" class="pregunta-search-bar">
                 <label for="pregunta-search-bar">📆 ¿Cuándo vas?</label>
+                <input type="date" class="pregunta-search-bar">
+                <label for="pregunta-search-bar">🛬 ¿Cuándo regresas?</label>
                 <input type="date" class="pregunta-search-bar">
                 <label for="pregunta-search-bar">👫 ¿Con quién vas?</label>
                 <input type="number" class="pregunta-search-bar" placeholder="Número de Personas">
-                <button id="btn-buscar-search">Buscar</button>
+                <button id="btn-buscar-search"><a href="catalogo.html">Buscar</a></button>
             </div>
         </section>
 
@@ -73,61 +76,130 @@
             <div class="fila-servicios">
                 <div class="tarjeta-servicio">
                     <img src="assets/images/show.jpg" alt="show-room" class="servicio-imagen">
-                    <span>Show Room 💃🎶</span>
+                    <span class="titulo-servicio">Show Room 💃🎶</span>
                 </div>
                 <div class="tarjeta-servicio">
                     <img src="assets/images/restaurante.avif" alt="restaurante" class="servicio-imagen">
-                    <span>Restaurante 🍽️🍷</span>
+                    <span class="titulo-servicio">Restaurante 🍽️🍷</span>
                 </div>
                 <div class="tarjeta-servicio">
                     <img src="assets/images/spa.jpg" alt="spa" class="servicio-imagen">
-                    <span>Spa 🧖‍♀️</span>
+                    <span class="titulo-servicio">Spa 🧖‍♀️</span>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="habitaciones">
             <h2 class="titulo-seccion">Habitaciones Destacadas</h2>
             
-            <div class="productos-novedades">
-                <article class="tarjeta-producto">
+            <div class="scroll-habitaciones">
+                <article class="card-habitacion">
                     <img src="assets/images/habitaciones/habitacion familiar.webp" alt="habitacion" class="imagen-producto">
-                    <h3 class="titulo-producto">Suite Familiar</h3>
-                    <p class="precio-producto">$320 € / noche</p>
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Suite Familiar</h3>
+                        <p class="precio-producto">$320 € / noche</p>
+                    </div>
                 </article>
 
-                <article class="tarjeta-producto">
+                <article class="card-habitacion">
                     <img src="assets/images/habitaciones/habitacion matrimonial.png" alt="habitacion" class="imagen-producto">
-                    <h3 class="titulo-producto">Habitación Matrimonial</h3>
-                    <p class="precio-producto">$340 € / noche</p>
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Habitación Matrimonial</h3>
+                        <p class="precio-producto">$340 € / noche</p>
+                    </div>
                 </article>
 
-                <article class="tarjeta-producto">
+                <article class="card-habitacion">
                     <img src="assets/images/habitaciones/habitacion r.webp" alt="habitacion" class="imagen-producto">
-                    <h3 class="titulo-producto">Suite Deluxe</h3>
-                    <p class="precio-producto">$450 € COP / noche</p>
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Suite Deluxe</h3>
+                        <p class="precio-producto">$450 € COP / noche</p>
+                    </div>
                 </article>
-            </div>
+
+                <article class="card-habitacion">
+                    <img src="assets/images/habitaciones/habitacion precidencial.jpg" alt="habitacion" class="imagen-producto">
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Suite presidencial</h3>
+                        <p class="precio-producto">$780 € COP / noche</p>
+                    </div>
+                </article>
+
+                <article class="card-habitacion">
+                    <img src="assets/images/habitaciones/doble.webp" alt="habitacion" class="imagen-producto">
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Habitación doble</h3>
+                        <p class="precio-producto">$180 € COP / noche</p>
+                    </div>
+                </article>
+
+                <article class="card-habitacion">
+                    <img src="assets/images/habitaciones/habitacion economica.avif" alt="habitacion" class="imagen-producto">
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Habitación económica</h3>
+                        <p class="precio-producto">$120 € COP / noche</p>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section class="carousel-section">
+
+        <section class="seccion-carrusel">
             <h2 class="titulo-seccion">Todos nuestros servicios</h2>
-            <div class="carousel-container">
-                <img src="assets/images/piscina.webp" alt="piscina" id="carousel-image">
-                <h3>Piscina 🏊‍♂️</h3>
-                <img src="assets/images/jacuzzi.avif" alt="jacuzzi" id="carousel-image">
-                <h3>Jacuzzi 🧖</h3>
-                <img src="assets/images/spa.jpg" alt="spa" id="carousel-image">
-                <h3>Spa 💆‍♀️</h3>
-                <img src="assets/images/restaurante.avif" alt="restaurante" id="carousel-image">
-                <h3>Restaurante 🍽️🍷</h3>
-                <img src="assets/images/show.jpg" alt="show-room" id="carousel-image">
-                <h3>Show Room 💃🎶</h3>
-                <img src="assets/images/bar.jpg" alt="bar" id="carousel-image">
-                <h3>Bar 🍻🥂🍾</h3>
-                <img src="assets/images/wifi.webp" alt="wifi" id="carousel-image">
-                <h3>Wifi 💻</h3>
+            <div class="carrusel-container">
+                <button class="btn-carrusel prev"> ❮ </button>
+                <div class="contenedor-slides">
+                    <div class="slide active">
+                        <img src="assets/images/piscina.webp" alt="piscina" id="imagen-carrusel">
+                        <div class="info-slide">
+                            <h3>Piscina 🏊‍♂️</h3>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/images/jacuzzi.avif" alt="jacuzzi" id="imagen-carrusel">
+                        <div class="info-slide">
+                            <h3>Jacuzzi 🧖</h3>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/images/spa.jpg" alt="spa" id="imagen-carrusel">
+                        <div class="info-slide">
+                            <h3>Spa 💆‍♀️</h3>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/images/restaurante.avif" alt="restaurante" id="imagen-carrusel">
+                        <div class="info-slide">
+                            <h3>Restaurante 🍽️🍷</h3>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/images/show.jpg" alt="show-room" id="imagen-carrusel">
+                        <div class="info-slide">
+                            <h3>Show Room 💃🎶</h3>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/images/bar.jpg" alt="bar" id="imagen-carrusel">
+                        <div class="info-slide">
+                            <h3>Bar 🍻🥂🍾</h3>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/images/wifi.webp" alt="wifi" id="imagen-carrusel">
+                        <div class="info-slide">
+                            <h3>Wifi 💻</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-carrusel next"> ❯ </button>
             </div>
         </section>
     </main>

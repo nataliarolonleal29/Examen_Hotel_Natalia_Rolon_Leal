@@ -10,7 +10,7 @@ const images=[
 
 let current=0;
 
-const image=document.getElementById("carousel-image");
+const image=document.getElementById("imagen-carrusel");
 
 document.getElementById("next").addEventListener("click", ()=>{
     current++;
