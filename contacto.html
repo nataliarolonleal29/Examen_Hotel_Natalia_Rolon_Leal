@@ -3,9 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reservas.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    
+    <header class="header-menu-lateral">
+        <input type="checkbox" id="boton-sidebar" class="boton-sidebar">
+        
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="titulo-menu">Hotel el Rincón del Carmen</h2>
+                <label for="boton-sidebar" class="btn-cerrar">✖</label>
+            </div>
+            
+            <ul class="menu-links">
+                <li><a href="index.html">🏠 Inicio</a></li>
+                <li><a href="reservas.html">🛏️ Reservas</a></li>
+                <li><a href="contacto.html">📍 Contacto</a></li>
+                <li><a href="login.html">🔑 Login</a></li>
+                <li><a href="register.html">👤 Registro</a></li>
+            </ul>
+        </nav>
+        <label for="boton-sidebar" class="overlay"></label>
+    </header>
+
+    <header class="navbar">
+        <label for="boton-sidebar" class="menu-logo">☰</label>
+        <h1 class="titulo-index">Hotel el Rincón del Carmen</h1>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="contacto.html">¡Contáctanos!</a>
+        </nav>
+
+        <div class="seccion-usuario">
+            <span id="userInfo">Invitado</span>
+            <button type="button" onclick="logout()"><b>Salir</b></button>
+        </div>
+        <div class="header-spacer"></div>
+    </header>
+    <section class="contacto">
+        <div>
+            <h1>Informacion general</h1>
+            <p>El hotel el Rincon el Carmen, es un exclusivo hotel de lujo cinco estrellas ubicado frente al mar Mediterráneo, en la costa suroeste de Ibiza. Diseñado para ofrecer una experiencia sofisticada y relajante, combina arquitectura moderna, gastronomía gourmet y servicios premium para viajeros internacional</p>
+        </div>
+        <div>
+            <h1>Informacion de contacto</h1>
+            <ul>
+                <li>📍 Dirección: Paseo del Mediterráneo 28, Cala Serena, Ibiza, España</li>
+                <li> 📞 Teléfono: +34 971 458 220</li>
+                <li>📧 Correo electrónico: reservas@aureapalaceibiza.com</li>
+                <li>🌐 Página web: Hotel Aurea Palace Ibiza</li>
+                <li>🕒 Check-in: 3:00 p.m.</li>
+               <li> 🕛 Check-out: 12:00 p.m.</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Mision</h1>
+            <p>Brindar experiencias inolvidables de lujo y bienestar en Ibiza, ofreciendo atención personalizada, excelencia en el servicio y espacios diseñados para el descanso, la exclusividad y la conexión con el Mediterráneo.</p>
+        </div>
+        <div>
+            <H1>Vision</H1>
+            <p>Ser reconocido como el hotel de lujo más exclusivo y sostenible de Ibiza, destacándose por su innovación, hospitalidad premium y experiencias únicas para huéspedes de todo el mundo.</p>
+        </div>
+        <div class="politicas">
+            <h1>Políticas del Hotel</h1>
+            <h1>Reservas</h1>
+            <ul>
+                <li>Se requiere una tarjeta de crédito válida para garantizar la reserva.</li>
+                <li>Cancelaciones gratuitas hasta 72 horas antes del check-in.</li>
+                <li>Cancelaciones fuera del plazo generan un cargo equivalente a una noche.</li>
+            </ul>
+            <h1>Mascotas</h1>
+            <ul>
+                <li>Se admiten mascotas pequeñas bajo solicitud previa.</li>
+                <li>Puede aplicarse un cargo adicional.</li>
+            </ul>
+            <h1>Política de Ruido</h1>
+            <ul>
+                <li>El hotel mantiene un ambiente exclusivo y tranquilo.</li>
+                <li>Eventos privados deben ser autorizados previamente.</li>
+            </ul>
+            <h1>Política de Piscina y Spa</h1>
+            <ul>
+                <li>Acceso al spa únicamente para mayores de 16 años.</li>
+                <li>Uso obligatorio de vestimenta adecuada en zonas wellness.</li>
+            </ul>
+            <h1>Política Ambiental</h1>
+            <ul>
+                <li>Programa de reducción de plásticos y ahorro energético.</li>
+                <li>Amenities ecológicos y reutilización responsable de toallas.</li>
+            </ul>
+            </div>
+            <div class="calificacion">
+                <h1>Calificación del Hotel</h1>
+                <ul>
+                    <li>⭐ 4.9 / 5.0</li>
+                    <li>Basado en la experiencia de huéspedes internacionales, el hotel destaca por:</li>
+                    <li>Atención personalizada</li>
+                    <li>Limpieza impecable</li>
+                    <li>Gastronomía de lujo</li>
+                    <li>Ubicación privilegiada frente al mar</li>
+                    <li>Diseño elegante y moderno</li>
+                </ul>
+            </div>
+    </section>
+    <footer class="bottom-nav">
+        <a href="index.html">🏠<br>Inicio</a>
+        <a href="reservas.html">🛏️<br>Reservas</a>
+        <a href="contacto.html">📍<br>Contacto</a>
+    </footer>
 </body>
 </html>

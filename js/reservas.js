@@ -11,7 +11,7 @@ if (!habitacion) {
   `;
 } else {
   parteReserva.innerHTML = `
-  <div class="detalle">
+  <div class="detalle-reserva">
     <p id="anterior">◀︎</p>
     <img src="${habitacion.imagenes[0]}" class="imagen-carrusel">
     <p id="siguiente">▶︎</p>
@@ -28,12 +28,15 @@ if (!habitacion) {
         <p>Seleccione la fecha de salida:</p>
         <input type="date" name="calendario" id="calendario2">
         <p>Seleccione la cantidad de personas</p>
-        <input type="number" name="" id="personas">
-        <button class="botonReserva">confirmar reserva</button>
-    </form> 
+        <input type="number" id="personas">
+        <br>
+        <button id="confirmarReserva" class="botonReserva">
+          Confirmar reserva
+        </button>
+        <div id="contenedorCancelar"></div>
+      </form> 
     </div>
   </div>
-
 `;
 }
 pago.innerHTML = `
@@ -59,11 +62,26 @@ let input1 = document.querySelector("#calendario1");
 let input2 = document.querySelector("#calendario2");
 
 const botonReserva = document.querySelector("#confirmarReserva");
-const botonCancelar = document.querySelector("#cancelarReserva");
 const usuarioActivo = JSON.parse(
     localStorage.getItem("usuarioActivo")
 );
+const contenedorCancelar = document.querySelector("#contenedorCancelar");
 
+// EVITAR DUPLICAR BOTONES
+if (!document.querySelector("#cancelarReserva")) {
+
+  contenedorCancelar.innerHTML = `
+  
+    <button id="cancelarReserva">
+      Cancelar reserva
+    </button>
+  
+  `;
+
+  const botonCancelar = document.querySelector("#cancelarReserva");
+
+  botonCancelar.addEventListener("click", cancelarReserva);
+}
 // ARRAY DONDE SE GUARDAN LAS RESERVAS
 let reservas = [];
 
@@ -142,8 +160,9 @@ function verificarSesion(){
 
     return true;
 }
-function registrarReserva() {
+function registrarReserva(e) {
 
+  e.preventDefault();
   let fechaIngreso = new Date(input1.value);
   let fechaSalida = new Date(input2.value);
 
@@ -193,7 +212,8 @@ function registrarReserva() {
 // -------------------------
 // CANCELAR RESERVA
 // -------------------------
-function cancelarReserva() {
+function cancelarReserva(e) {
+  e.preventDefault();
   if (reservas.length === 0) {
     alert("No hay reservas");
     return;

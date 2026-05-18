@@ -406,3 +406,6 @@ footer a:hover{
     cursor: pointer;
     font-weight: bold;
 }
+.detalle{
+    background-color: var(--color-blanco);
+}

@@ -6,11 +6,53 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reservas.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/reservas.js"></script>
 </head>
 <body>
+    <header class="header-menu-lateral">
+        <input type="checkbox" id="boton-sidebar" class="boton-sidebar">
+        
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="titulo-menu">Hotel el Rincón del Carmen</h2>
+                <label for="boton-sidebar" class="btn-cerrar">✖</label>
+            </div>
+            
+            <ul class="menu-links">
+                <li><a href="index.html">🏠 Inicio</a></li>
+                <li><a href="reservas.html">🛏️ Reservas</a></li>
+                <li><a href="contacto.html">📍 Contacto</a></li>
+                <li><a href="login.html">🔑 Login</a></li>
+                <li><a href="register.html">👤 Registro</a></li>
+            </ul>
+        </nav>
+        <label for="boton-sidebar" class="overlay"></label>
+    </header>
+
+    <header class="navbar">
+        <label for="boton-sidebar" class="menu-logo">☰</label>
+        <h1 class="titulo-index">Hotel el Rincón del Carmen</h1>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="contacto.html">¡Contáctanos!</a>
+        </nav>
+
+        <div class="seccion-usuario">
+            <span id="userInfo">Invitado</span>
+            <button type="button" onclick="logout()"><b>Salir</b></button>
+        </div>
+        <div class="header-spacer"></div>
+    </header>
     <section id="reservacion"></section>
     <section id="pago"></section>
+    <footer class="bottom-nav">
+        <a href="index.html">🏠<br>Inicio</a>
+        <a href="reservas.html">🛏️<br>Reservas</a>
+        <a href="contacto.html">📍<br>Contacto</a>
+    </footer>
     
 </body>
 </html>

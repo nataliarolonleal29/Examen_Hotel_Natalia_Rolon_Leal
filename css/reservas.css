@@ -5,7 +5,7 @@
 }
 /* BODY */
 body{
-    background-color: #f5f5f5;
+    background-color: var(--color-beige);
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 20px;
 }
@@ -17,7 +17,7 @@ body{
     gap: 20px;
 }
 .card{
-    background-color: #f1f1e9;
+    background-color: var(--color-blanco);
     width: 100%;
     max-width: 320px;
     border-radius: 25px;
@@ -39,7 +39,7 @@ body{
     margin-bottom: 10px;
 }
 .card h2{
-    color: #0b257a;
+    color: var(--color-oscuro);
     margin-bottom: 5px;
 }
 .card p{
@@ -47,12 +47,12 @@ body{
 }
 .precio{
     font-weight: bold;
-    color: #051c9b;
+    color: var(--color-oscuro);
     font-size: 1.1rem;
 }
 .card button{
     margin-top: 10px;
-    background-color: #0b257a;
+    background-color: var(--color-oscuro);
     color: white;
     border: none;
     border-radius: 20px;
@@ -61,7 +61,7 @@ body{
     transition: 0.3s;
 }
 .card button:hover{
-    background-color: #1a27dd;
+    background-color: var(--color-rojo);
 }
 #card-completa{
     display: flex;
@@ -79,6 +79,8 @@ body{
     gap: 20px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
 }
+
+
 .info{
     display: flex;
     flex-direction: column;
@@ -94,6 +96,20 @@ body{
 .botones{
     width: 5px;
     height: 5px;
+}
+#confirmarReserva{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.detalle-reserva{
+    width: 90%;
+    margin: 2rem auto;
+    background-color: var(--color-blanco);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: row;
+    position: relative;
 }
 /* TABLET */
 @media (min-width: 768px){
