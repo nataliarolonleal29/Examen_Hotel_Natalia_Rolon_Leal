@@ -29,6 +29,7 @@ if (!habitacion) {
         <input type="date" name="calendario" id="calendario2">
         <p>Seleccione la cantidad de personas</p>
         <input type="number" name="" id="personas">
+        <button class="botonReserva">confirmar reserva</button>
     </form> 
     </div>
   </div>
@@ -54,24 +55,155 @@ pago.innerHTML = `
     </div>
   </div>
 `;
-let input1 =document.querySelector("#calendario1")
-let input2 =document.querySelector("#calendario2")
-input1.addEventListener("input", function(){
-  return console.log(input1.value)
-})
-input2.addEventListener("input", function(){
-  return console.log(input2.value)
-})
-function calcularNoches(input1, input2){
+let input1 = document.querySelector("#calendario1");
+let input2 = document.querySelector("#calendario2");
+
+const botonReserva = document.querySelector("#confirmarReserva");
+const botonCancelar = document.querySelector("#cancelarReserva");
+const usuarioActivo = JSON.parse(
+    localStorage.getItem("usuarioActivo")
+);
+
+// ARRAY DONDE SE GUARDAN LAS RESERVAS
+let reservas = [];
+
+
+// -------------------------
+// CALCULAR NOCHES
+// -------------------------
+
+function calcularNoches() {
+
   let fechaIngreso = new Date(input1.value);
   let fechaSalida = new Date(input2.value);
+
   let resultado = fechaSalida - fechaIngreso;
+
   let noches = resultado / (1000 * 60 * 60 * 24);
+
   return noches;
 }
 
-function precio(noches){
+
+// -------------------------
+// CALCULAR PRECIO
+// -------------------------
+
+function precio(noches) {
+
   let cantidad = habitacion.precio;
+
   let resultado = noches * cantidad;
+
   return resultado;
 }
+
+
+// -------------------------
+// VALIDAR SOLAPAMIENTO
+// -------------------------
+
+function haySolapamiento(nuevaEntrada, nuevaSalida) {
+
+  for (let reserva of reservas) {
+
+    let entradaExistente = new Date(reserva.ingreso);
+    let salidaExistente = new Date(reserva.salida);
+
+    // VALIDACIÓN DE SOLAPAMIENTO
+    if (
+      nuevaEntrada < salidaExistente &&
+      nuevaSalida > entradaExistente
+    ) {
+
+      return true;
+    }
+  }
+
+  return false;
+}
+
+
+// -------------------------
+// REGISTRAR RESERVA
+// -------------------------
+function verificarSesion(){
+
+    const usuarioActivo = JSON.parse(
+        localStorage.getItem("usuarioActivo")
+    );
+
+    if(!usuarioActivo){
+
+        alert("Debes iniciar sesión");
+
+        return false;
+    }
+
+    return true;
+}
+function registrarReserva() {
+
+  let fechaIngreso = new Date(input1.value);
+  let fechaSalida = new Date(input2.value);
+
+  // VALIDAR FECHAS VACÍAS
+  if (!input1.value || !input2.value) {
+
+    alert("Debes seleccionar ambas fechas");
+
+    return;
+  }
+
+  // VALIDAR QUE LA SALIDA SEA MAYOR
+  if (fechaSalida <= fechaIngreso) {
+
+    alert("La fecha de salida debe ser mayor");
+
+    return;
+  }
+
+  let noches = calcularNoches();
+
+  // VALIDAR MÁXIMO 33 DÍAS
+  if (noches > 33) {
+
+    alert("No se permiten reservas mayores a 33 días");
+
+    return;
+  }
+
+  // VALIDAR SOLAPAMIENTO
+  if (haySolapamiento(fechaIngreso, fechaSalida)) {
+    alert("La habitación ya está reservada en esas fechas");
+    return;
+  }
+  // CREAR OBJETO RESERVA
+  let nuevaReserva = {
+    ingreso: input1.value,
+    salida: input2.value,
+    noches: noches,
+    total: precio(noches)
+  };
+  // GUARDAR RESERVA
+  reservas.push(nuevaReserva);
+  console.log(reservas);
+  alert("Reserva registrada correctamente");
+}
+// -------------------------
+// CANCELAR RESERVA
+// -------------------------
+function cancelarReserva() {
+  if (reservas.length === 0) {
+    alert("No hay reservas");
+    return;
+  }
+  reservas.pop();
+  console.log(reservas);
+  alert("Última reserva cancelada");
+}
+// -------------------------
+// EVENTOS
+// -------------------------
+botonReserva.addEventListener("click", registrarReserva);
+botonCancelar.addEventListener("click", cancelarReserva);
