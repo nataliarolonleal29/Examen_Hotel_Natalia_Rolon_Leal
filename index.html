@@ -6,6 +6,7 @@
     <title>Hotel el Rincón del Carmen</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/auth.js" defer></script>
+    <script src="js/components/slider.js" defer></script>
 </head>
 <body>
     <header class="header-menu-lateral">
@@ -59,13 +60,13 @@
     <main class="main-content">
         <section class="search-section">
             <div id="search-bar">
-                <label for="pregunta-search-bar">🛬 ¿A dónde quieres ir?</label>
-                <input type="date" class="pregunta-search-bar">
                 <label for="pregunta-search-bar">📆 ¿Cuándo vas?</label>
+                <input type="date" class="pregunta-search-bar">
+                <label for="pregunta-search-bar">🛬 ¿Cuándo regresas?</label>
                 <input type="date" class="pregunta-search-bar">
                 <label for="pregunta-search-bar">👫 ¿Con quién vas?</label>
                 <input type="number" class="pregunta-search-bar" placeholder="Número de Personas">
-                <button id="btn-buscar-search">Buscar</button>
+                <button id="btn-buscar-search"><a href="catalogo.html">Buscar</a></button>
             </div>
         </section>
 
@@ -75,46 +76,75 @@
             <div class="fila-servicios">
                 <div class="tarjeta-servicio">
                     <img src="assets/images/show.jpg" alt="show-room" class="servicio-imagen">
-                    <span>Show Room 💃🎶</span>
+                    <span class="titulo-servicio">Show Room 💃🎶</span>
                 </div>
                 <div class="tarjeta-servicio">
                     <img src="assets/images/restaurante.avif" alt="restaurante" class="servicio-imagen">
-                    <span>Restaurante 🍽️🍷</span>
+                    <span class="titulo-servicio">Restaurante 🍽️🍷</span>
                 </div>
                 <div class="tarjeta-servicio">
                     <img src="assets/images/spa.jpg" alt="spa" class="servicio-imagen">
-                    <span>Spa 🧖‍♀️</span>
+                    <span class="titulo-servicio">Spa 🧖‍♀️</span>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="habitaciones">
             <h2 class="titulo-seccion">Habitaciones Destacadas</h2>
             
-            <div class="productos-novedades">
-                <article class="tarjeta-producto">
+            <div class="scroll-habitaciones">
+                <article class="card-habitacion">
                     <img src="assets/images/habitaciones/habitacion familiar.webp" alt="habitacion" class="imagen-producto">
-                    <h3 class="titulo-producto">Suite Familiar</h3>
-                    <p class="precio-producto">$320 € / noche</p>
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Suite Familiar</h3>
+                        <p class="precio-producto">$320 € / noche</p>
+                    </div>
                 </article>
 
-                <article class="tarjeta-producto">
+                <article class="card-habitacion">
                     <img src="assets/images/habitaciones/habitacion matrimonial.png" alt="habitacion" class="imagen-producto">
-                    <h3 class="titulo-producto">Habitación Matrimonial</h3>
-                    <p class="precio-producto">$340 € / noche</p>
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Habitación Matrimonial</h3>
+                        <p class="precio-producto">$340 € / noche</p>
+                    </div>
                 </article>
 
-                <article class="tarjeta-producto">
+                <article class="card-habitacion">
                     <img src="assets/images/habitaciones/habitacion r.webp" alt="habitacion" class="imagen-producto">
-                    <h3 class="titulo-producto">Suite Deluxe</h3>
-                    <p class="precio-producto">$450 € COP / noche</p>
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Suite Deluxe</h3>
+                        <p class="precio-producto">$450 € COP / noche</p>
+                    </div>
                 </article>
-            </div>
+
+                <article class="card-habitacion">
+                    <img src="assets/images/habitaciones/habitacion precidencial.jpg" alt="habitacion" class="imagen-producto">
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Suite presidencial</h3>
+                        <p class="precio-producto">$780 € COP / noche</p>
+                    </div>
+                </article>
+
+                <article class="card-habitacion">
+                    <img src="assets/images/habitaciones/doble.webp" alt="habitacion" class="imagen-producto">
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Habitación doble</h3>
+                        <p class="precio-producto">$180 € COP / noche</p>
+                    </div>
+                </article>
+
+                <article class="card-habitacion">
+                    <img src="assets/images/habitaciones/habitacion economica.avif" alt="habitacion" class="imagen-producto">
+                    <div class="info-habitacion">
+                        <h3 class="titulo-producto">Habitación económica</h3>
+                        <p class="precio-producto">$120 € COP / noche</p>
+                    </div>
+                </article>
             </div>
         </section>
 
 
-        <section class="carousel-section">
+        <section class="seccion-carrusel">
             <h2 class="titulo-seccion">Todos nuestros servicios</h2>
             <div class="carrusel-container">
                 <button class="btn-carrusel prev"> ❮ </button>
