@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/auth.js" defer></script>
     <script src="js/components/slider.js" defer></script>
+    <script src="js/components/buscador.js" defer></script>
 </head>
 <body>
     <header class="header-menu-lateral">
@@ -58,17 +59,19 @@
     </section>
 
     <main class="main-content">
-        <section class="search-section">
+        <section class="buscador-hotel">
             <div id="search-bar">
                 <label for="pregunta-search-bar">📆 ¿Cuándo vas?</label>
-                <input type="date" class="pregunta-search-bar">
+                <input type="date" id="fechaEntrada" class="pregunta-search-bar">
                 <label for="pregunta-search-bar">🛬 ¿Cuándo regresas?</label>
-                <input type="date" class="pregunta-search-bar">
+                <input type="date" id="fechaSalida" class="pregunta-search-bar">
                 <label for="pregunta-search-bar">👫 ¿Con quién vas?</label>
-                <input type="number" class="pregunta-search-bar" placeholder="Número de Personas">
-                <button id="btn-buscar-search"><a href="catalogo.html">Buscar</a></button>
+                <input type="number" id="cantidadPersonas" class="pregunta-search-bar" placeholder="Número de Personas" min="1">
+                <button id="btnBuscar">Buscar Habitaciones</button>
+                <!-- <a href="catalogo.html"><button id="btn-buscar-search" class="btn-barra-buscar">Buscar</button></a> -->
             </div>
         </section>
+        <section id="resultadosHabitaciones"></section>
 
         <section>
             <h2 class="titulo-seccion">Servicios Destacados</h2>

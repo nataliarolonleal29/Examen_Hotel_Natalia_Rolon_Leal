@@ -207,3 +207,16 @@ function cancelarReserva() {
 // -------------------------
 botonReserva.addEventListener("click", registrarReserva);
 botonCancelar.addEventListener("click", cancelarReserva);
+
+
+// Obtener reserva con barra buscadora
+export function obtenerReservas() {
+  return JSON.parse(localStorage.getItem("reservas")) || [];
+}
+
+export function guardarReserva(reserva) {
+  const reservas=obtenerReservas();
+  reservas.push(reserva);
+
+  localStorage.setItem("reservas", JSON.stringify(reservas));
+}
