@@ -67,21 +67,7 @@ const usuarioActivo = JSON.parse(
 );
 const contenedorCancelar = document.querySelector("#contenedorCancelar");
 
-// EVITAR DUPLICAR BOTONES
-if (!document.querySelector("#cancelarReserva")) {
 
-  contenedorCancelar.innerHTML = `
-  
-    <button id="cancelarReserva">
-      Cancelar reserva
-    </button>
-  
-  `;
-
-  const botonCancelar = document.querySelector("#cancelarReserva");
-
-  botonCancelar.addEventListener("click", cancelarReserva);
-}
 // ARRAY DONDE SE GUARDAN LAS RESERVAS
 let reservas = [];
 
@@ -163,6 +149,13 @@ function verificarSesion(){
 function registrarReserva(e) {
 
   e.preventDefault();
+
+  // VALIDAR SESIÓN
+  if (!verificarSesion()) {
+    window.location.href = "login.html";
+    return;
+  }
+
   let fechaIngreso = new Date(input1.value);
   let fechaSalida = new Date(input2.value);
 
@@ -194,20 +187,41 @@ function registrarReserva(e) {
 
   // VALIDAR SOLAPAMIENTO
   if (haySolapamiento(fechaIngreso, fechaSalida)) {
+
     alert("La habitación ya está reservada en esas fechas");
+
     return;
   }
+
   // CREAR OBJETO RESERVA
   let nuevaReserva = {
     ingreso: input1.value,
     salida: input2.value,
     noches: noches,
-    total: precio(noches)
+    total: precio(noches),
+    usuario: usuarioActivo.email
   };
+
   // GUARDAR RESERVA
   reservas.push(nuevaReserva);
+
   console.log(reservas);
+
   alert("Reserva registrada correctamente");
+  // CREAR BOTÓN CANCELAR SOLO DESPUÉS DE RESERVAR
+
+  if (!document.querySelector("#cancelarReserva")) {
+
+  contenedorCancelar.innerHTML = `
+  
+    <button id="cancelarReserva">
+      Cancelar reserva
+    </button>
+  
+  `;
+  const botonCancelar = document.querySelector("#cancelarReserva");
+  botonCancelar.addEventListener("click", cancelarReserva);
+}
 }
 // -------------------------
 // CANCELAR RESERVA
@@ -221,6 +235,7 @@ function cancelarReserva(e) {
   reservas.pop();
   console.log(reservas);
   alert("Última reserva cancelada");
+  contenedorCancelar.innerHTML = "";
 }
 // -------------------------
 // EVENTOS

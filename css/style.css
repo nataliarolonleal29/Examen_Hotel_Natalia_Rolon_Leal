@@ -409,3 +409,121 @@ footer a:hover{
 .detalle{
     background-color: var(--color-blanco);
 }
+.contacto{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contacto p{
+    color: black;
+    line-height: 1.6;
+}
+
+/* TITULOS */
+.contacto h1{
+    color: var(--color-principal);
+    margin-bottom: 15px;
+}
+
+/* CAJAS GENERALES */
+.contacto > div{
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* INFORMACION DE CONTACTO */
+.contacto ul{
+    padding-left: 20px;
+}
+
+.contacto li{
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* MISION Y VISION */
+.m-v{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.mision,
+.vision{
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f8f8f8;
+}
+
+/* POLITICAS */
+.politicas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* TITULO PRINCIPAL */
+.politicas h1:first-child{
+    grid-column: span 2;
+    text-align: center;
+}
+
+/* SUBTITULOS */
+.politicas h1:not(:first-child){
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--color-principal);
+}
+
+/* LISTAS DE POLITICAS */
+.politicas ul{
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* CALIFICACION */
+.calificacion ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.calificacion li{
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .m-v{
+        flex-direction: column;
+    }
+
+    .mision,
+    .vision{
+        width: 100%;
+    }
+
+    .politicas{
+        grid-template-columns: 1fr;
+    }
+
+    .politicas h1:first-child{
+        grid-column: span 1;
+    }
+
+    .calificacion ul{
+        grid-template-columns: 1fr;
+    }
+}
