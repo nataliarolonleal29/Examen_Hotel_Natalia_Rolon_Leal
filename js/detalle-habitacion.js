@@ -30,7 +30,7 @@ contenedor.innerHTML = `
   </div>
 
 `;
-const imagen = document.querySelector("img")
+const imagen = document.querySelector(".imagen-carrusel");
 const btnSiguiente = document.getElementById("siguiente");
 const btnAnterior = document.getElementById("anterior");
 let indiceActual = 0;
@@ -73,7 +73,4 @@ btnAnterior.addEventListener("click", ()=>{
    mostrarImagen();
 
 });
-contenedor.addEventListener("click", () => {
-   window.location.href = `habitacion.html?id=${habitacion.id}`;
- });
-contenedor.appendChild();
+

@@ -20,6 +20,8 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: var(--color-blanco);
     color: var(--color-oscuro);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Navbar */
