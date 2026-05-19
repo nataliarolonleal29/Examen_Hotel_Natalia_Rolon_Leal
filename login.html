@@ -4,21 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel el Rincón del Carmen - Iniciar Sesión</title>
-    <script src="js/auth.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/storage.js" defer></script>
+
 </head>
 <body>
-    <form id="login-form">
-        <label for="email">Correo electrónico</label>
-        <br>
-        <input type="email" id="email">
-        <br>
-        <br>
-        <label for="contraseña">Ingresa tu contraseña</label>
-        <br>
-        <input type="password" id="password">
-        <br>
-        <br>
-        <button type="submit">Ingresar</button>
-    </form>
+    <header class="navbar">
+        <label for="boton-sidebar" class="menu-logo">☰</label>
+        <h1 class="titulo-index">Hotel el Rincón del Carmen</h1>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="reservas.html">Habitaciones</a>
+            <a href="contacto.html">¡Contáctanos!</a>
+        </nav>
+
+        <div class="seccion-usuario">
+            <span id="userInfo">Invitado</span>
+            <button type="button" onclick="logout()"><b>Salir</b></button>
+        </div>
+        <div class="header-spacer"></div>
+    </header>
+
+    <div class="login-container">
+        <div class="form-section">
+            <h1 class="titulo-seccion">Inicio de Sesión</h1>
+            <form id="login-form" class="login-form">
+                <br>
+                <label for="email">Correo electrónico</label>
+                <br>
+                <input type="email" id="email">
+                <br>
+                <br>
+                <label for="contraseña">Ingresa tu contraseña</label>
+                <br>
+                <input type="password" id="password">
+                <br>
+                <br>
+                <button type="submit">Ingresar</button>
+                <br>
+                <br>
+                <label for="registrarse" class="pregunta-no-registrado">¿Aún no está registrado?</label>
+                <br>
+                <br>
+            </form>
+            <button><a href="register.html" class="boton-registrar">¡Registrese aquí!</a></button>
+        </div>
+        <img src="assets/images/imglogin.jpg" alt="imgLogin" class="imgLogin">
+    </div>
 </body>
 </html>

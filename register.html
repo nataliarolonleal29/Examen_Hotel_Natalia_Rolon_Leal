@@ -4,22 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel el Rincón del Carmen - Registro</title>
-    <script src="js/auth.js" defer></script>
+    <script src="js/storage.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <form id="registro-form">
-        <label for="nombre">Nombre Completo</label> <br>
-        <input type="text" id="nombre" placeholder="Escribe tu nombre aquí...">
-        <br>
-        <br>
-        <label for="nombre">Correo Electrónico</label> <br>
-        <input type="text" id="email" placeholder="Ej: usuario123@gmail.com">
-        <br>
-        <br>
-        <label for="nombre">Contraseña</label> <br>
-        <input type="text" id="password" placeholder="Ej: Micontraseña123*">
-        <br>
-        <button type="submit">Registrarse</button>
-    </form>
+    <header class="navbar">
+        <label for="boton-sidebar" class="menu-logo">☰</label>
+        <h1 class="titulo-index">Hotel el Rincón del Carmen</h1>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="reservas.html">Habitaciones</a>
+            <a href="contacto.html">¡Contáctanos!</a>
+        </nav>
+
+        <div class="seccion-usuario">
+            <span id="userInfo">Invitado</span>
+            <button type="button" onclick="logout()"><b>Salir</b></button>
+        </div>
+        <div class="header-spacer"></div>
+    </header>
+
+    <div class="registro-container">
+        <div class="form-section">
+            <h1 class="titulo-seccion">Registro de Usuario</h1>
+            <form id="registro-form" class="registro-form">
+                <label for="identificacion">Número de identificación</label>
+                <input type="number" id="identificacion" placeholder="Ej. C.C. 1098532746">
+                <br>
+                <br>
+                <label for="nombre">Nombre Completo</label> <br>
+                <input type="text" id="nombre" placeholder="Escribe tu nombre aquí...">
+                <br>
+                <br>
+                <label for="nacionalidad">Nacionalidad</label> <br>
+                <input type="text" id="nacionalidad" placeholder="Bogotá, Colombia">
+                <br>
+                <br>
+                <label for="telefono">Teléfono</label> <br>
+                <input type="tel" id="telefono" placeholder="+57 3124567898">
+                <br>
+                <br>
+                <label for="email">Correo Electrónico</label> <br>
+                <input type="text" id="email" placeholder="Ej: usuario123@gmail.com">
+                <br>
+                <br>
+                <label for="nombre">Contraseña</label> <br>
+                <input type="text" id="password" placeholder="Ej: Micontraseña123*">
+                <br>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+        <img src="assets/images/registerimg.avif" alt="imgRegister" class="imgRegister">
+    </div>
 </body>
 </html>

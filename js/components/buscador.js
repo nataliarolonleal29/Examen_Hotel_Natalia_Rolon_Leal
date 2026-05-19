@@ -1,5 +1,9 @@
 console.log("Buscador conectado");
 
+export const habitaciones=[
+    
+]
+
 import { habitaciones } from "../habitaciones";
 
 import{

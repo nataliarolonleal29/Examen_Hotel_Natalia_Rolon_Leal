@@ -561,3 +561,68 @@ footer a:hover{
         grid-template-columns: 1fr;
     }
 }
+
+/* Login */
+.login-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5%;
+}
+
+.form-section{
+    width: 45%;
+}
+
+.login-form label{
+    font-size: 2rem;
+}
+
+.login-form input{
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.imgLogin{
+    width: 45%;
+    height: 90vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.boton-registrar{
+    text-decoration: none;
+    color: white;
+}
+
+/* Register */
+.registro-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5%;
+}
+
+.registro-form label{
+    font-size: 2rem;
+}
+
+.registro-form input{
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.imgRegister{
+    width: 45%;
+    height: 90vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
