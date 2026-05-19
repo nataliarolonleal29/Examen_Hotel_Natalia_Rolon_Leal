@@ -3,18 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* BODY */
-body{
-    background-color: var(--color-beige);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 20px;
-}
+/* catalogo  */
 /* CONTENEDOR */
 #contenedor-habitaciones{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
+    padding: 80px 15px;
 }
 .card{
     background-color: var(--color-blanco);
@@ -63,6 +60,7 @@ body{
 .card button:hover{
     background-color: var(--color-rojo);
 }
+/*Detalle habitacion*/
 #card-completa{
     display: flex;
     flex-direction: row;
@@ -72,15 +70,14 @@ body{
     background-color: #f1f1e9;
     width: 100%;
     border-radius: 25px;
-    padding: 15px;
+    padding: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+    margin: 80px auto;
 }
-
-
 .info{
     display: flex;
     flex-direction: column;
@@ -120,12 +117,28 @@ body{
         flex-wrap: wrap;
     }
 
+    .imagen-carrusel{
+        height: 320px;
+    }
+
 }
-/*Computador*/
+
+/* DESKTOP */
 @media (min-width: 1024px){
 
     .card{
         max-width: 350px;
+    }
+
+    .detalle{
+        flex-direction: row;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .imagen-carrusel{
+        width: 500px;
+        height: 350px;
     }
 
 }
