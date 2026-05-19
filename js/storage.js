@@ -101,14 +101,17 @@ if (registroForm){
             return;
         }
     
-        const nuevoUsuario={
+        const nuevoUsuario = {
             id: Date.now(),
             identificacion,
             nombre,
             nacionalidad,
             telefono,
             email,
-            password
+            password,
+
+            // NUEVO
+            rol: "cliente"
         };
     
         usuarios.push(nuevoUsuario);
@@ -175,7 +178,28 @@ function logout() {
     localStorage.removeItem("usuarioActivo");
     window.location.href="login.html";
 }        
+const panelAdmin =
+document.getElementById("panelAdmin");
 
+const usuarioActivo =
+JSON.parse(localStorage.getItem("usuarioActivo"));
+
+if (panelAdmin) {
+
+  if (
+    usuarioActivo &&
+    usuarioActivo.rol === "admin"
+  ) {
+
+    panelAdmin.style.display = "block";
+
+  } else {
+
+    panelAdmin.style.display = "none";
+
+  }
+
+}
 /* function logout() {
     localStorage.removeItem("usuarioActivo");
     alert("Sesión cerrada");

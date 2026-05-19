@@ -69,7 +69,8 @@ const contenedorCancelar = document.querySelector("#contenedorCancelar");
 
 
 // ARRAY DONDE SE GUARDAN LAS RESERVAS
-let reservas = [];
+let reservas =
+JSON.parse(localStorage.getItem("reservas")) || [];
 
 
 // -------------------------
@@ -166,7 +167,6 @@ function registrarReserva(e) {
 
     return;
   }
-
   // VALIDAR QUE LA SALIDA SEA MAYOR
   if (fechaSalida <= fechaIngreso) {
 
@@ -174,9 +174,7 @@ function registrarReserva(e) {
 
     return;
   }
-
   let noches = calcularNoches();
-
   // VALIDAR MÁXIMO 33 DÍAS
   if (noches > 33) {
 
@@ -195,15 +193,23 @@ function registrarReserva(e) {
 
   // CREAR OBJETO RESERVA
   let nuevaReserva = {
+    id: Date.now(),
     ingreso: input1.value,
     salida: input2.value,
     noches: noches,
     total: precio(noches),
-    usuario: usuarioActivo.email
-  };
+    usuario: usuarioActivo.email,
+    habitacion: habitacion.nombre,
+    habitacionId: habitacion.id
+};
 
   // GUARDAR RESERVA
   reservas.push(nuevaReserva);
+
+  localStorage.setItem(
+    "reservas",
+    JSON.stringify(reservas)
+  );
 
   console.log(reservas);
 
@@ -226,16 +232,18 @@ function registrarReserva(e) {
 // -------------------------
 // CANCELAR RESERVA
 // -------------------------
-function cancelarReserva(e) {
-  e.preventDefault();
-  if (reservas.length === 0) {
-    alert("No hay reservas");
-    return;
-  }
-  reservas.pop();
-  console.log(reservas);
-  alert("Última reserva cancelada");
-  contenedorCancelar.innerHTML = "";
+function cancelarReserva(idReserva) {
+
+  reservas = reservas.filter(
+    reserva => reserva.id !== idReserva
+  );
+
+  localStorage.setItem(
+    "reservas",
+    JSON.stringify(reservas)
+  );
+
+  alert("Reserva cancelada");
 }
 // -------------------------
 // EVENTOS
