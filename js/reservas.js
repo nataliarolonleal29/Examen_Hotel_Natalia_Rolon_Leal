@@ -108,20 +108,31 @@ function precio(noches) {
 // VALIDAR SOLAPAMIENTO
 // -------------------------
 
-function haySolapamiento(nuevaEntrada, nuevaSalida) {
+function haySolapamiento(
+  nuevaEntrada,
+  nuevaSalida,
+  habitacionId
+) {
 
   for (let reserva of reservas) {
 
-    let entradaExistente = new Date(reserva.ingreso);
-    let salidaExistente = new Date(reserva.salida);
+    // SOLO VALIDAR MISMA HABITACIÓN
+    if (reserva.habitacionId === habitacionId) {
 
-    // VALIDACIÓN DE SOLAPAMIENTO
-    if (
-      nuevaEntrada < salidaExistente &&
-      nuevaSalida > entradaExistente
-    ) {
+      let entradaExistente =
+      new Date(reserva.ingreso);
 
-      return true;
+      let salidaExistente =
+      new Date(reserva.salida);
+
+      // VALIDAR FECHAS
+      if (
+        nuevaEntrada < salidaExistente &&
+        nuevaSalida > entradaExistente
+      ) {
+
+        return true;
+      }
     }
   }
 
@@ -184,7 +195,12 @@ function registrarReserva(e) {
   }
 
   // VALIDAR SOLAPAMIENTO
-  if (haySolapamiento(fechaIngreso, fechaSalida)) {
+  if (
+  haySolapamiento(
+    fechaIngreso,
+    fechaSalida,
+    habitacion.id
+  )){
 
     alert("La habitación ya está reservada en esas fechas");
 
@@ -215,16 +231,15 @@ function registrarReserva(e) {
 
   alert("Reserva registrada correctamente");
   // CREAR BOTÓN CANCELAR SOLO DESPUÉS DE RESERVAR
+   if (!document.querySelector("#cancelarReserva")) {
 
-  if (!document.querySelector("#cancelarReserva")) {
-
-  contenedorCancelar.innerHTML = `
-  
-    <button id="cancelarReserva">
-      Cancelar reserva
-    </button>
-  
-  `;
+    contenedorCancelar.innerHTML = `
+    
+      <button id="cancelarReserva">
+        Cancelar reserva
+      </button>
+    
+    `;
   const botonCancelar = document.querySelector("#cancelarReserva");
   botonCancelar.addEventListener("click", cancelarReserva);
 }
@@ -249,17 +264,21 @@ function cancelarReserva(idReserva) {
 // EVENTOS
 // -------------------------
 botonReserva.addEventListener("click", registrarReserva);
-botonCancelar.addEventListener("click", cancelarReserva);
 
 
-// Obtener reserva con barra buscadora
-export function obtenerReservas() {
-  return JSON.parse(localStorage.getItem("reservas")) || [];
-}
 
-export function guardarReserva(reserva) {
-  const reservas=obtenerReservas();
-  reservas.push(reserva);
+  // Obtener reserva con barra buscadora
+  export function obtenerReservas() {
+    return JSON.parse(localStorage.getItem("reservas")) || [];
+  }
+
+  export function guardarReserva(reserva) {
+    const reservas=obtenerReservas();
+    reservas.push(reserva);
 
   localStorage.setItem("reservas", JSON.stringify(reservas));
 }
+botonReserva.addEventListener(
+  "click",
+  registrarReserva
+);
