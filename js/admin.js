@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const usuarioActivo = JSON.parse(
   localStorage.getItem("usuarioActivo")
 );
@@ -118,7 +117,23 @@ function editarReserva(id) {
   mostrarReservas();
 
 }
-=======
+function irAdmin() {
+    const usuarioActivo =
+    JSON.parse(localStorage.getItem("usuarioActivo"));
+    if(!usuarioActivo){
+
+        alert("Debes iniciar sesión");
+
+        window.location.href = "login.html";
+
+        return;
+    }
+    if(usuarioActivo.rol !== "admin"){
+        alert("No tienes permisos de administrador");
+        return;
+    }
+    window.location.href = "admin.html";
+}
 /* function irAdmin() {
     const usuarioActual=JSON.parse(localStorage.getItem("usuarioActual"));
 
@@ -134,7 +149,4 @@ function editarReserva(id) {
         }
 
         window.location.href="admin.html";
-}
-
-window.irAdmin=irAdmin; */
->>>>>>> 75509ff7f2dc30dabaa494a39eac8d050cf8f460
+} */
