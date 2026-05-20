@@ -1,6 +1,6 @@
 import { habitaciones }
 from "../habitaciones.js";
-console.log("Buscador FUNCIONA");
+/*console.log("Buscador FUNCIONA");*/
 
 const btnBuscar=document.getElementById("btnBuscar");
 const resultados=document.getElementById("resultadosHabitaciones");
