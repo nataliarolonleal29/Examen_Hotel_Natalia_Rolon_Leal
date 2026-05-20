@@ -32,7 +32,7 @@ Los usuarios pueden:
 - Seleccionar fecha de entrada.
 - Seleccionar fecha de salida.
 - Indicar cantidad de personas.
-![barra_buscadora](assets/images/README%20capturas/landingpage.JPG)
+![barra_buscadora](assets/images/README%20capturas/searchbar.JPG)
 
 El sistema:
 
@@ -41,7 +41,7 @@ El sistema:
 - Calcula el precio total.
 - Evita reservas solapadas.
 - Muestra habitaciones no disponibles.
-![Landing_Page](assets/images/README%20capturas/landingpage.JPG)
+![resultados_filtrados](assets/images/README%20capturas/resultados%20filtrados.JPG)
 
 ## Sistema de Usuarios
 ### Registro de usuarios
@@ -54,6 +54,7 @@ Campos requeridos:
 - Teléfono
 - Correo electrónico
 - Contraseña
+![registro](assets/images/README%20capturas/registro.JPG)
 
 ### Validaciones implementadas
 - Campos obligatorios.
@@ -63,12 +64,14 @@ Campos requeridos:
 - Teléfono solo numérico.
 - Identificación única.
 - Correos duplicados no permitidos.
+![validaciones_registro](assets/images/README%20capturas/validaciones%20registro.JPG)
 
 ### Login y Logout
 - Inicio de sesión mediante LocalStorage.
 - Persistencia de sesión.
 - Cierre de sesión.
 - Visualización del usuario actual.
+![localStorage](assets/images/README%20capturas/localstorage.JPG)
 
 ### Sistema de Reservas
 - Reserva de habitaciones.
@@ -76,11 +79,13 @@ Campos requeridos:
 - Almacenamiento en LocalStorage.
 - Evita reservas en fechas ocupadas.
 - Asociación de reservas con el usuario autenticado.
+![reservas](assets/images/README%20capturas/reservas.JPG)
 
 ### Panel de Administrador
 - Acceso exclusivo para administrador.
 - Validación de permisos.
 - Redirección protegida.
+![admin_boton](assets/images/README%20capturas/admin%20perfil.JPG)
 
 ### Responsive Design
 
@@ -92,6 +97,7 @@ El proyecto fue optimizado principalmente para dispositivos móviles:
 - Imágenes optimizadas.
 - Navbar responsive.
 - Prevención de scroll horizontal.
+![responsive](assets/images/README%20capturas/responsive.JPG)
 
 ### Tecnologías Utilizadas
 - HTML5
@@ -101,6 +107,7 @@ El proyecto fue optimizado principalmente para dispositivos móviles:
 - Responsive Design
 - Flexbox
 - CSS Grid
+![lenguajes](assets/images/README%20capturas/lenguajes.jpg)
 
 ### Estructura del Proyecto
 Proyecto_Hotel_Rincon_del_Carmen_Natalia_Rolon_Sara_Colmenares

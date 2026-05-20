@@ -200,16 +200,3 @@ if (panelAdmin) {
   }
 
 }
-/* function logout() {
-    localStorage.removeItem("usuarioActivo");
-    alert("Sesión cerrada");
-    setTimeout(()=>{
-        window.location.href="login.html";
-    }, 1000);
-}
-
-// Logout
-function logout() {
-    localStorage.removeItem("usuarioActivo");
-    window.location.href="login.html";
-} */
