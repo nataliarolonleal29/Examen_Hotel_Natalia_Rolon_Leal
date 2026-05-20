@@ -245,7 +245,7 @@ botonCancelar.addEventListener("click", cancelarReserva);
 
 
 // Obtener reserva con barra buscadora
-export function obtenerReservas() {
+/* export function obtenerReservas() {
   return JSON.parse(localStorage.getItem("reservas")) || [];
 }
 
@@ -254,4 +254,4 @@ export function guardarReserva(reserva) {
   reservas.push(reserva);
 
   localStorage.setItem("reservas", JSON.stringify(reservas));
-}
+} */

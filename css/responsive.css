@@ -1,4 +1,204 @@
-/*  @media(max-width: 768px){
+/* Responsive para tablets */
+
+@media (max-width: 992px){
+    .navbar{
+        padding: 15px 20px;
+    }
+
+    .nav-links{
+        gap: 15px;
+    }
+
+    .hero{
+        height: 70vh;
+    }
+
+    .hero-content{
+        width: 85%;
+        padding: 30px;
+    }
+
+    .hero-content h2{
+        font-size: 2.5rem;
+    }
+
+    .habitaciones{
+        gap: 20px;
+    }
+
+    .card-habitacion{
+        min-width: 300px;
+    }
+
+    .search-bar{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .search-bar input,
+    .search-bar button{
+        width: 48%;
+    }
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        padding: 15px;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .logo{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .hero{
+        height: 80vh;
+        background-position: center;
+    }
+
+    .hero-content{
+        width: 92%;
+        padding: 20px;
+    }
+
+    .hero-content h2{
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p{
+        font-size: 1rem;
+    }
+
+    .hero-content button{
+        width: 100%;
+    }
+
+    .search-bar{
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    .search-bar input,
+    .search-bar button{
+        width: 100%;
+    }
+
+    .card-habitacion{
+        min-width: 85%;
+    }
+
+    .card-habitacion img{
+        height: 220px;
+    }
+
+    .info-habitacion{
+        padding: 15px;
+    }
+
+    .info-habitacion h2{
+        font-size: 1.5rem;
+    }
+
+    .carrusel-container{
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .btn-prev,
+    .btn-next{
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .contenedor-slides{
+        height: 250px;
+    }
+
+    .slide img{
+        object-fit: cover;
+    }
+
+    .info-slide{
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        padding: 15px;
+    }
+
+    .info-slide h3{
+        font-size: 1.1rem;
+    }
+
+    .info-slide p{
+        font-size: 0.9rem;
+    }
+
+    footer{
+        padding: 30px 20px;
+        text-align: center;
+    }
+}
+
+/* Responsive para celulares pequeños */
+@media (max-width: 480px){
+    .hero-content h2{
+        font-size: 1.6rem;
+    }
+
+    .hero-content p{
+        font-size: 0.9rem;
+    }
+
+    .logo{
+        font-size: 1.5rem;
+    }
+
+    .card-habitacion{
+        min-width: 95%;
+    }
+
+    .card-habitacion img{
+        height: 200px;
+    }
+
+    .info-habitacion h2{
+        font-size: 1.2rem;
+    }
+
+    .search-bar{
+        padding: 15px;
+    }
+
+    .btn-prev,
+    .btn-next{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 768px){
     .navbar{
         flex-direction: column;
         gap: 15px;
@@ -17,7 +217,7 @@
         width: 100%;
     }
 
-} */
+}
 
 @media(max-width: 768px){
     .contenedor-slides{
