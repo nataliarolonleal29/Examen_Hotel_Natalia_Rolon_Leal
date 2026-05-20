@@ -38,3 +38,66 @@
         font-size: 1.5rem;
     }
 }
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px){
+
+    .imagen-carrusel{
+
+        height: 400px;
+    }
+
+    #anterior,
+    #siguiente{
+
+        top: 200px;
+    }
+
+    .parte-pagar{
+
+        max-width: 600px;
+    }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1024px){
+
+    .detalle-reserva{
+
+        flex-direction: row;
+    }
+
+    .imagen-carrusel{
+
+        width: 50%;
+        height: auto;
+    }
+
+    .info{
+
+        width: 50%;
+        justify-content: center;
+    }
+
+    #anterior,
+    #siguiente{
+
+        top: 50%;
+    }
+
+    #siguiente{
+
+        right: 52%;
+    }
+
+    .parte-pagar{
+
+        max-width: 700px;
+    }
+}

@@ -12,9 +12,7 @@ if (!habitacion) {
 } else {
   parteReserva.innerHTML = `
   <div class="detalle-reserva">
-    <p id="anterior">◀︎</p>
     <img src="${habitacion.imagenes[0]}" class="imagen-carrusel">
-    <p id="siguiente">▶︎</p>
     <div class="info">
       <h1>${habitacion.nombre}</h1>
       <p><strong>Camas:</strong> ${habitacion.camas}</p>
@@ -39,25 +37,7 @@ if (!habitacion) {
   </div>
 `;
 }
-pago.innerHTML = `
-  <div class="parte-pagar">
-    <div class="checkout-content">
-      <h3>Método de Pago</h3>
-    </div>
-    <div class="tarjeta-checkout">
-      <input type="radio" name="pago" id="visa" checked>
-      <label for="visa">💳 Visa / Mastercard</label>
-    </div>
-    <div class="tarjeta-checkout">
-      <input type="radio" name="pago" id="efecty">
-      <label for="efecty">💵 Efecty</label>
-    </div>
-    <div class="tarjeta-checkout">
-      <input type="radio" name="pago" id="pse">
-      <label for="pse">📲 PSE</label>
-    </div>
-  </div>
-`;
+
 let input1 = document.querySelector("#calendario1");
 let input2 = document.querySelector("#calendario2");
 
@@ -158,6 +138,58 @@ function verificarSesion(){
 
     return true;
 }
+function mostrarPago() {
+
+  pago.innerHTML = `
+
+    <div class="parte-pagar">
+
+      <div class="checkout-content">
+        <h2>Finalizar Reserva</h2>
+      </div>
+
+      <form class="formularioPago">
+
+        <label>Nombre completo</label>
+        <input type="text" required>
+
+        <label>Nacionalidad</label>
+        <input type="text" required>
+
+        <label>Edad</label>
+        <input type="number" required>
+
+        <label>Cédula</label>
+        <input type="number" required>
+
+        <h3>Método de Pago</h3>
+
+        <div class="tarjeta-checkout">
+          <input type="radio" name="pago" id="visa" checked>
+          <label for="visa">💳 Visa / Mastercard</label>
+        </div>
+
+        <div class="tarjeta-checkout">
+          <input type="radio" name="pago" id="efecty">
+          <label for="efecty">💵 Efecty</label>
+        </div>
+
+        <div class="tarjeta-checkout">
+          <input type="radio" name="pago" id="pse">
+          <label for="pse">📲 PSE</label>
+        </div>
+
+        <button type="submit" class="btn-pagar">
+          Pagar reserva
+        </button>
+
+      </form>
+
+    </div>
+
+  `;
+}
+
 function registrarReserva(e) {
 
   e.preventDefault();
@@ -230,6 +262,7 @@ function registrarReserva(e) {
   console.log(reservas);
 
   alert("Reserva registrada correctamente");
+  mostrarPago();
   // CREAR BOTÓN CANCELAR SOLO DESPUÉS DE RESERVAR
    if (!document.querySelector("#cancelarReserva")) {
 
@@ -241,9 +274,12 @@ function registrarReserva(e) {
     
     `;
   const botonCancelar = document.querySelector("#cancelarReserva");
-  botonCancelar.addEventListener("click", cancelarReserva);
+  botonCancelar.addEventListener("click", () => {
+    cancelarReserva(nuevaReserva.id);
+  });
 }
 }
+
 // -------------------------
 // CANCELAR RESERVA
 // -------------------------
@@ -260,13 +296,6 @@ function cancelarReserva(idReserva) {
 
   alert("Reserva cancelada");
 }
-// -------------------------
-// EVENTOS
-// -------------------------
-botonReserva.addEventListener("click", registrarReserva);
-
-
-
   // Obtener reserva con barra buscadora
   export function obtenerReservas() {
     return JSON.parse(localStorage.getItem("reservas")) || [];
