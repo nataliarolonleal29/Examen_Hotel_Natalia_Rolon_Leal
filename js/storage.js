@@ -102,6 +102,7 @@ if (registroForm){
         }
     
         const nuevoUsuario = {
+
             id: Date.now(),
             identificacion,
             nombre,
@@ -109,10 +110,16 @@ if (registroForm){
             telefono,
             email,
             password,
-
-            // NUEVO
             rol: "cliente"
         };
+        
+        if(
+            email === "lauragomez@gmail.com" &&
+            password === "1234567"
+
+        ){
+            nuevoUsuario.rol = "admin";
+        }
     
         usuarios.push(nuevoUsuario);
     
