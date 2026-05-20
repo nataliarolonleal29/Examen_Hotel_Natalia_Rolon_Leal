@@ -114,12 +114,11 @@ if (registroForm){
         };
         
         if(
-            email === "lauragomez@gmail.com" &&
-            password === "1234567"
-
-        ){
-            nuevoUsuario.rol = "admin";
-        }
+        email === "adminhotel@gmail.com" &&
+        password === "1234567"
+    ){
+        nuevoUsuario.rol = "admin";
+    }
     
         usuarios.push(nuevoUsuario);
     

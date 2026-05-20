@@ -117,7 +117,7 @@ function editarReserva(id) {
   mostrarReservas();
 
 }
-=======
+
 /* function irAdmin() {
     const usuarioActual=JSON.parse(localStorage.getItem("usuarioActual"));
 
@@ -136,4 +136,4 @@ function editarReserva(id) {
 }
 
 window.irAdmin=irAdmin; */
->>>>>>> 75509ff7f2dc30dabaa494a39eac8d050cf8f460
+

@@ -299,7 +299,6 @@ botonReserva.addEventListener(
   "click",
   registrarReserva
 );
-=======
 
 // Obtener reserva con barra buscadora
 /* export function obtenerReservas() {
@@ -312,4 +311,4 @@ export function guardarReserva(reserva) {
 
   localStorage.setItem("reservas", JSON.stringify(reservas));
 } */
->>>>>>> 75509ff7f2dc30dabaa494a39eac8d050cf8f460
+
