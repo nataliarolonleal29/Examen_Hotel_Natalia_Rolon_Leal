@@ -1,4 +1,4 @@
-# Hotel el Rincón del Carmen
+# Hotel el Rincón del Carmen Examen
 Sitio web responsive para la gestión y reserva de habitaciones de hotel, desarrollado con HTML5, CSS3 y JavaScript Vanilla, utilizando LocalStorage para la simulación de almacenamiento de datos y autenticación de usuarios.
 
 ## Descripción del Proyecto
