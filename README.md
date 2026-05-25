@@ -1,4 +1,10 @@
-# Hotel el Rincón del Carmen Examen
+# Examen Hotel el Rincón del Carmen
+
+## Para visualizar el examen
+Para visualizar el examen realizado por Natalia Rolón Leal, se debe ingresar a la página de Habitaciones, después se realiza una reserva, y cuando se dé click en el botón "Confirmar reserva", se va a visualizar la finalización del pago y **la generación de la factura de cada habitación exacta**, con sus respectivos datos específicos.
+![Factura](assets/images/README%20capturas/captura%20para%20readme.png)
+
+## Descripción
 Sitio web responsive para la gestión y reserva de habitaciones de hotel, desarrollado con HTML5, CSS3 y JavaScript Vanilla, utilizando LocalStorage para la simulación de almacenamiento de datos y autenticación de usuarios.
 
 ## Descripción del Proyecto

@@ -167,7 +167,7 @@ function mostrarPago() {
           <label for="pse">📲 PSE</label>
         </div>
 
-        <button type="submit" class="btn-pagar">
+        <button type="submit" class="btn-factura">
           Pagar reserva
         </button>
 
@@ -177,6 +177,31 @@ function mostrarPago() {
 
   `;
 }
+
+const btn_pagar=document.getElementById("btn-factura")
+const factura=document.getElementById("factura")
+
+function generarFactura() {
+  factura.innerHTML = `
+    <div class="parte-factura">
+      <div class="factura-card">
+        <div class="factura-content">
+            <h2>Factura de la reserva</h2>
+        </div>
+        <div class="info">
+          <h1>Habitación Reservada:</h1>
+          <h1>${habitacion.nombre}</h1>
+          <p><strong>Camas:</strong> ${habitacion.camas}</p>
+          <p><strong>Capacidad:</strong> ${habitacion.personas}</p>
+          <p><strong>Baño:</strong> ${habitacion.baño}</p>
+          <p><strong>Servicios:</strong> ${habitacion.servicios}</p>
+          <p><strong>Precio:</strong> $${habitacion.precio}</p>
+        </div>
+      </div>
+    </div>
+  `
+}
+
 
 function registrarReserva(e) {
 
@@ -251,6 +276,7 @@ function registrarReserva(e) {
 
   alert("Reserva registrada correctamente");
   mostrarPago();
+  generarFactura();
   // CREAR BOTÓN CANCELAR SOLO DESPUÉS DE RESERVAR
    if (!document.querySelector("#cancelarReserva")) {
 
