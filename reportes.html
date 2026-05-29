@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Ocupación</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/reporte.js" defer></script>
+</head>
+<body>
+
+    <h1>Reporte de Ocupación y Cancelaciones</h1>
+
+    <div class="contenedor-filtro">
+        <label for="año">Seleccione un año:</label>
+
+        <select id="año">
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+        </select>
+
+        <button onclick="generarReporte()">
+            Generar Reporte
+        </button>
+    </div>
+
+    <h2 id="tituloReporte"></h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Mes</th>
+                <th>Ocupación</th>
+                <th>Cancelaciones</th>
+            </tr>
+        </thead>
+
+        <tbody id="tablaReporte">
+        </tbody>
+    </table>
+</body>
+</html>
