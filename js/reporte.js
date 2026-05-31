@@ -29,6 +29,9 @@ function generarReporte() {
 
     tabla.innerHTML = "";
 
+    console.log("Año seleccionado:", añoSeleccionado);
+    console.log("Tipo:", typeof añoSeleccionado);
+
     for(let i = 0; i < 12; i++){
 
         let ocupacion = 0;
@@ -36,11 +39,16 @@ function generarReporte() {
 
         reservas.forEach(reserva => {
 
-            const fecha = new Date(reserva.ingreso);
+            /* const fecha = new Date(reserva.ingreso);
         
             const año = fecha.getFullYear();
         
-            const mes = fecha.getMonth();
+            const mes = fecha.getMonth(); */
+
+            const [añoReserva, mesReserva] = reserva.ingreso.split("-");
+
+            const año = Number(añoReserva);
+            const mes = Number(mesReserva) - 1;
         
             console.log(
                 "Reserva:",
@@ -59,6 +67,10 @@ function generarReporte() {
             ) {
                 ocupacion++;
             }
+            console.log(
+                Number(añoSeleccionado),
+                año,
+                Number(añoSeleccionado) === año);
         });
 
         /* reservas.forEach(reserva => {
